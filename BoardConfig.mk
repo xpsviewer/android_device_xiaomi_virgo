@@ -172,9 +172,10 @@ TARGET_HW_DISK_ENCRYPTION := true
 # Simple time service client
 BOARD_USES_QC_TIME_SERVICES := true
 
-# Charger
+#Offline Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BOARD_CHARGER_DISABLE_INIT_BLANK := false
+BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
